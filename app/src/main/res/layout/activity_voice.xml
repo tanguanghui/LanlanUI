@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+
+    tools:context="com.speechcontrol.VoiceChatActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        android:layout_weight="1">
+        <ListView
+            android:id="@+id/listView"
+            android:divider="@null"
+            android:background="#00000000"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:padding="8dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+           >
+            <Switch
+                android:textColor="#ffffff"
+                android:layout_width="0dp"
+                android:layout_height="18dp"
+                android:id="@+id/bluetoothswitch"
+                android:layout_weight="0.7"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="0dp"
+                android:checked="false"
+                android:text="蓝牙开关：" />
+            <TextView
+                android:layout_height="18dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                />
+            <Button
+                android:text="搜索"
+                android:textColor="#ffffff"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:id="@+id/buttonSearchBluetooth"
+
+                android:background="@drawable/button_stytle"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:padding="8dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+           >
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:id="@+id/list_bluetooth"/>
+            <TextView
+                android:layout_height="18dp"
+                android:layout_width="0dp"
+                android:layout_weight="0.5"
+                />
+
+            <Button
+                android:id="@+id/buttonConnectBluetooth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:background="@drawable/button_stytle"
+
+                android:text="连接"
+                android:textColor="#ffffff" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="@string/text_speech_recognition"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv_show"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="@string/text_answer"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/tv_choice"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="20sp" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/voice_llt_bottom_height1"
+            android:background="@android:color/white">
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:id="@+id/layout_control"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="@drawable/control"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_weight="5"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button_run"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="80dp"
+                            android:background="@drawable/up"
+                             />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button_left"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/left"
+                            />
+
+                        <Button
+                            android:id="@+id/button_stop"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/stop"
+                            />
+
+                        <Button
+                            android:id="@+id/button_right"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/right"
+                             />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/button_back"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="80dp"
+                            android:layout_marginTop="0dp"
+                            android:background="@drawable/down"
+                           />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_levo"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/left_handed_rotation"
+
+                        />
+
+                    <Button
+                        android:id="@+id/button_dextro"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/right_handed_rotation"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+</LinearLayout>
